@@ -26,7 +26,10 @@ public:
 	{
 		cout << "Name: " << name << endl << "id: " << id << endl << "age: " << age << endl;
 	}
-
+	void Print2()
+	{
+		cout << "hello" << endl;
+	}
 	virtual ~Person() = 0;
 
 
