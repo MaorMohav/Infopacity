@@ -21,26 +21,43 @@ a{
     margin-top: 150px;
 }
 
-.NavButtons{
-    background-color: black;  
-    width: ; 
-}
+ul {
+			
+    list-style-type: none;
+     padding:0;
+     margin:0;
+     position: fixed; /* Make it stick, even on scroll */
+     overflow: auto;
+     top:0;
+     width:100%;
+     background-color: black;
+ 
+  }
+  
+  
+li {
+     float: left;
+ }
 
-.NavButtons button{
-    background-color: black; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    font-weight: bold;
-}
 
-.NavButtons button:hover{
-    background-color:  #7ce7ca;
+
+li a {
+     
+     display: inline-block;
+     color: white;
+     padding: 30px 50px;
+     text-decoration: none;
+ }
+
+
+li a:hover {
+     
+         color: 7CE7CA ;
+       }
+       
+li a:hover:not(.active) {
+ background-color:  #7CE7CA;
+ color: white;
 }
 
 #Username  {
@@ -104,16 +121,14 @@ a{
 }
 
 h1{
-    margin:auto ;
-    font-size: 70px;
-    font-family:Impact;
-    background-color: #7ce7ca;
-    border-style: none;
-    border-color: red;
-    text-align : center;
-    border-bottom: 2px solid red;
+    background-color: #7CE7CA;
+    font-family: Impact;
+    font-size: 78px;
     padding:20px;
-    width: 100%;
+    margin-top: 78px;
+    width:100%;
+    text-align: center;
+    
 }
 
 h2{
