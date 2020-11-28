@@ -1,0 +1,51 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'Register/GeneralRegistrationStyle.css' %}"> 
+
+
+
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<title>Infopacity-Registration</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+
+
+    <ul>
+		<li><a href="{% url 'user:Login' %}" >Home</a></li>
+		<li><a href="{% url 'user:About' %}">About</a></li>
+		<li><a href="{% url 'user:Contact' %}">Contact</a></li>
+  </ul>
+
+    <main>
+        <h1>Infopacity Registration</h1>
+        
+		<div id="signup" > 
+		
+		<h2>sign up as:</h2>
+			
+			<ol id="list" >
+				<li ><a href="{% url 'user:CustomerRegistration' %}">customer </a></li><br><br>
+				<li> <a href="{% url 'user:ManagerRegistration' %}" > manager </a> </li> <br><br>
+				<li> <a href="{% url 'user:EmployeeRegistration' %}" > employee</a> </li>
+			
+		    </ol>
+		
+		
+		
+		
+		
+		</div>
+		
+		
+		
+    </main>
+</body>
+
+</html>
