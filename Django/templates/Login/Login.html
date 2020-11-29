@@ -1,0 +1,78 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'Login/Login.css' %}"> 
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Login</title>
+	</head>
+
+
+
+<body>
+
+  <ul>
+		<li><a href="{% url 'user:Login' %}" >Home</a></li>
+		<li><a href="{% url 'user:About' %}">About</a></li>
+		<li><a href="{% url 'user:Contact' %}">Contact</a></li>
+		
+  </ul>
+  
+   <div id="logo">
+	     <br> <br> <br> <br> <br> <br>
+        <img src="{% static 'Login/Infopacity-logo.png'%}">
+            
+	     
+    </div>
+	
+	
+	    
+		  
+	<div id="login">
+	
+	 <form action="/action_page.php">
+     <h1>
+      Log in:</br></br>
+	 </h1>
+    <label for="uname"></label>
+    <input type="text" id="uname" name="username" placeholder="User name..."></br></br>
+     
+	<label for="pass"></label>
+    <input type="text" id="pass" name="password" placeholder="Password..."></br>
+   
+   <div id="forgot">
+	Forgot password?
+	</div>
+	
+    </br></br> 
+    <label for="duty">Authorization:</label><br>
+    <select id="duty" name="duty" >
+      <option value="Manager">Manager</option>
+	  <option value="Worker">Worker</option>
+       <option value="Client">Client</option>
+    </select>
+	
+	</br></br> </br>
+	
+	<div id="sing up">
+	
+	<a href="{% url 'user:Register' %}" >Don't have an account? Sign up </a>
+	
+	</div>
+    
+    <input type="submit" value="Login"></br>
+
+	
+    </form>
+	</div>
+
+	 </br></br>
+
+</body>
+</html>
+
+
+	 
