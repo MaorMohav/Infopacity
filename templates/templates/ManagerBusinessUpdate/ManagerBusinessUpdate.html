@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager business update</title>
+    <link rel="stylesheet" href="ManagerBusinessUpdate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+    <ul>
+		<li><a href="ManagerHome.html" >Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+		<li id="logout"><a href="Login.html" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+
+    <main>
+        <h1>Manager business update</h1>
+        <div class="RegiPanel">
+            <h2>fill in the desired fields:</h2>	
+            <form action="/registration">
+                <p class="user1">
+					<strong>update opening hours:<strong><br>
+					
+                   from:<label for="Username"></label>
+                    
+                    <input type="time" name="Username" id="Username" placeholder="hrs:mins" minlength="6"
+                        maxlength="15">
+
+                </p>
+				
+                <p>
+                   until    : <label for="Password"></label>
+                    
+                    <input type="time" name="Password" id="Password" placeholder="hrs:mins" minlength="6"
+                        maxlength="20">
+                </p>
+				<p>
+                    <button>update opening hours</button>
+                </p>
+					<br>
+					<strong>update maximum capacity<strong>
+                <p>
+                    <label for="Email"></label>
+                    
+                    <input type="number" name="Email" id="quantity" placeholder="max capacity" required>
+                </p>
+                
+				<p>
+                    <button>update capacity</button>
+                </p>
+				
+				
+				
+                
+                
+            </form>
+            
+        </div>
+    </main>
+</body>
+
+</html>

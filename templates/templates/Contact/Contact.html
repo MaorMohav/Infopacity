@@ -1,0 +1,65 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'Contact/Contact.css' %}"> 
+
+<html>
+
+	<head>
+	    
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title> About </title>
+	
+    <link rel="stylesheet" href="Contact.css">
+
+	  
+	</head>
+
+
+
+<body>
+
+  <ul>
+		<li><a href="{% url 'user:Login' %}" >Home</a></li>
+		<li><a href="{% url 'user:About' %}">About</a></li>
+		<li><a href="{% url 'user:Contact' %}">Contact</a></li>
+		
+  </ul>
+  
+  
+   <div id="contact1">
+	    <br>
+		CONTACT
+            
+	     
+    </div>
+	
+	
+	    
+		  
+	<div id="explanation">
+	
+        <img src="{% static 'Contact/contact image.jpg'%}" class="mainImg"/>
+            
+         </br>
+         </br>
+		 </br>
+		 </br>
+		 </br>
+		 </br>
+	    <p>
+		
+            Customer Service Email : -----@---.com
+			
+		</p>
+	   
+    
+	</div>
+
+	
+</body>
+</html>
+
+
+	 
