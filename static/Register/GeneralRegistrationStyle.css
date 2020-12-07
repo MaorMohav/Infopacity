@@ -1,0 +1,128 @@
+body{
+    background-image: url('shops.jpg');
+    margin: 0%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+	color:black;
+	font-size:40px;
+	font-family: Impact;
+}
+#signup{
+	border:3px solid black;
+	
+	width:20%;
+	height:410px;
+	background-color:#1E9FC4;
+	text-align:center;
+	border-radius:10px;
+	/*margin-left:0%;*/
+	float:center;
+}
+
+#wholepage{
+	width:1800px;
+	
+}
+#d{
+	 color: green;
+}
+
+#list{
+	color:blue;
+	font-size:25px;
+	text-align:center;
+	margin-left:55px;
+	list-style-type:none;
+	
+	
+	
+}
+
+
+
+
+ul {
+			
+    list-style-type: none;
+     padding:0;
+     margin:0;
+     position: fixed; /* Make it stick, even on scroll */
+     overflow: auto;
+     top:0;
+     width:100%;
+     background-color: black;
+ 
+  }
+  
+  
+li {
+     float: left;
+ }
+
+
+
+li a {
+     
+     display: inline-block;
+     color: white;
+     padding: 30px 50px;
+     text-decoration: none;
+ }
+
+
+li a:hover {
+     
+        color: #7CE7CA ;
+		
+       }
+
+   
+li a:hover:not(.active) {
+ background-color:  #7CE7CA;
+ color: white;
+ 
+
+ 
+}
+
+
+
+
+.RegiPanel i{
+    position: absolute;
+    color: rgb(66, 200, 194);
+    padding: 20px 10px;
+}
+#Client{
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+h1{
+    background-color: #7CE7CA;
+    font-family: Impact;
+    font-size: 78px;
+    padding:20px;
+    margin-top: 78px;
+    width:100%;
+    text-align: center;
+	
+    
+}
+
+h2{
+    font-family: cursive;
+}

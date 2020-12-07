@@ -1,0 +1,185 @@
+body{
+		     background-image: url('manager.jpeg');
+	         background-size:500px;
+		     margin:0;
+			 background-color: #7CE7CA ;
+			 
+			 }
+			 #logout{
+				 color:red;
+				 position: fixed;
+				 margin-left:140px;
+			 }
+			 
+			 #wholepage{
+				 width:1800px;
+			 }
+			 
+			 #signup{
+				margin:20px; 
+				border:3px solid black;
+	            padding: 0;
+				width:20%;
+				height:200px;
+				background-color:#1E9FC4;
+				text-align:center;
+				border-radius:10px;
+				float:center;
+}
+			 
+			 #list{
+				color:blue;
+				font-size:20px;
+				text-align:left;
+				margin-left:1px;
+				list-style-type:none;
+	
+	
+	
+}
+			 #logo{
+			 
+			 
+			 
+			 margin:auto;
+			 
+			 text-align: center;
+			 
+			 
+			 
+			 }
+			 
+			 
+			 
+			 
+			 #search{
+				width: 30%;
+				border-radius: 5px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				background-color: white;
+				background-position: 10px 10px;
+				background-repeat: no-repeat;
+				padding-left: 40px;
+				border: none;
+				border-bottom: 2px solid red;
+				/*margin-left:33%;*/
+				background-color:#1E9FC4;
+				
+				
+			 }
+			 
+			 #Password{
+				 width:53%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				background-color: white;
+				background-position: 10px 10px;
+				background-repeat: no-repeat;
+				padding-left: 40px;
+				border: none;
+				border-bottom: 2px solid red;
+				margin-left:5%
+			 }
+			 
+			 ul {
+			
+                   list-style-type: none;
+					padding:0;
+					margin:0;
+					position: fixed; /* Make it stick, even on scroll */
+					overflow: auto;
+					top:0;
+					width:100%;
+                    background-color: black;
+				
+                 }
+				 
+				 
+		     li {
+					float: left;
+				}
+ 
+           
+             
+			li a {
+			        
+			        display: inline-block;
+					color: white;
+					padding: 30px 50px;
+					text-decoration: none;
+				}
+       
+			
+			li a:hover {
+					
+						color: 7CE7CA ;
+					  }
+					  
+			 li a:hover:not(.active) {
+                background-color:  #7CE7CA;
+                color: white;
+             }
+			 
+			 
+			 #login{
+			 
+			 float:center;
+	   	     text-align: center;
+			 border-radius: 5px;
+			 background-color: white; 
+			 border:10px solid #a9efdc ;  
+	     	 margin:auto;
+			 margin:10px;
+			 padding:6px;
+			 width:30%;
+
+			 }
+			 
+			 
+			 h1{
+			 
+			 text-shadow: 2px 2px 5px #7CE7CA;
+			 }
+			 
+			 
+			input[type=text], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+
+			
+             input[type=submit]{
+			width: 50%;
+			background-color: #a9efdc;
+			font-weight: bold;
+			color: black;
+			padding: 10px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			
+			}
+
+            input[type=submit]:hover {
+            background-color: #7CE7CA;
+			font-weight: bold;
+			color: white;
+            }
+			h2{
+				background-color: #7CE7CA;
+				font-family: Impact;
+				font-size: 78px;
+				padding:20px;
+				margin-top: 78px;
+				width:100%;
+				text-align: center;
+    
+			}

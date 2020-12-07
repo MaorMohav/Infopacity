@@ -1,0 +1,58 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'RegisterSuccess/RegisterSuccess.css' %}"> 
+
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>RegisterSuccess</title>
+    <link rel="stylesheet" href="RegisterSuccess.css">
+
+	</head>
+
+
+
+<body>
+<center>
+<div id="wholepage">
+
+  <ul>
+		<li><a href="{% url 'user:Login' %}" >Home</a></li>
+		<li><a href="{% url 'user:About' %}">About</a></li>
+		<li><a href="{% url 'user:Contact' %}">Contact</a></li>
+		
+  </ul>
+  
+   <div id="logo">
+	     <br> <br> <br> <br> <br> <br>
+        <img src="{% static 'Login/Infopacity-logo.png'%}">
+            
+	     
+    </div>
+	
+	<h2>
+	     You have registered successfully.
+	</h2>
+	<h3>
+		 To continue to login press <a href="{% url 'user:Login' %}"> here</a>
+	</h3>
+	
+	
+	    
+		  
+	
+    
+    
+
+	
+    
+	</div>
+
+	 </br></br>
+</div>
+</center>
+</body>
+</html>
