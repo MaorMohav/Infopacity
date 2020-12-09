@@ -1,5 +1,5 @@
 body{
-    background-image: url('manager.jpeg');
+    background-image: url('customer.jpeg');
     margin: 0%;
 	background-size:500px;
 	
@@ -152,15 +152,13 @@ h2{
     border:3px solid black;
     padding: 0;
     width:20%;
-    height:200px;
+    height:150;
     margin:300px;
     color: white;
     background-color:#1E9FC4;
     text-align:center;
     border-radius:10px;
     float:center;
-	
-	
 }
 
  
@@ -184,14 +182,12 @@ h2{
     bottom: 23px;
     right: 28px;
     width: 280px;
-	
 
   }
 
   .open-button:hover:not(.active) {
     background-color: #7CE7CA;
     color: white;
-	
  }
 
 
@@ -201,18 +197,5 @@ h2{
     
    
   }
-  
-	  /* #wholepage{ */
-		  /* width:1800px; */
-	  /* } */
 	
-	h1{
-    background-color: #7CE7CA;
-    font-family: Impact;
-    font-size: 78px;
-    padding:20px;
-    margin-top: 60px;
-    width:100%;
-    text-align: center;
-    
-	}
+	
