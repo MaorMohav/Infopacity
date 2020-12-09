@@ -1,0 +1,197 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'ManagerPersonal/ManagerPersonal.css' %}"> 
+
+    <element event='some JavaScript'>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Business update</title>
+    <link rel="stylesheet" href="ManagerBusinessUpdate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+<div id="wholepage">
+<center>
+    <ul>
+		<li><a href="{% url 'user:ManagerHome' %}" >Home</a></li>
+		<li id="logout"><a href="{% url 'user:Login' %}" style="color:red"><strong>Logout<strong></a></li>
+		
+	</ul>	
+			
+		
+		
+  <div id="signup" > 		
+   
+  <button class="open-button" onclick="openChangePassword()"> update opening hours </button>
+        
+
+  <div class="RegiPanel" id="FormPassword">
+    <!-- <h2>fill in the desired fields:</h2> -->
+    <form action="/registration"  class="form-container">
+        <p class="user1">
+
+            <label for="Username"></label>
+            <i class="fas fa-id-badge"></i>
+            <input type="text" name="user_name" id="Username" placeholder="enter username" minlength="6" maxlength="15">
+
+        </p>
+        <p>	from:<br>
+            <label for="Password"></label>
+            <!-- <i class="fas fa-lock" aria-hidden="true"></i> -->
+            <input type="time" name="password" id="Password" placeholder="hrs:mins" minlength="6"
+                maxlength="20">
+        </p>
+
+
+        <p>	until:<br>
+            <label for="confirm-Password"></label>
+            <!-- <i class="fas fa-lock" aria-hidden="true"></i> -->
+            <input type="time" name="password_conf" id="Password" placeholder="hrs:mins" minlength="6"
+                maxlength="20">
+
+        </p>
+
+
+        <p>
+            <button>update opening hours</button>
+        </p>
+         
+        <p>
+        <button type="button" onclick="closeChangePassword()">Close</button>
+        </p>
+
+    </form>
+
+    </div>
+
+
+        <button class="open-button" onclick="openChangeEmail()" > update maximum capacity </button> 
+        <div class="RegiPanel" id="FormEmail">
+            <h2>fill in the desired fields:</h2>
+           
+         <form action="/registration"  class="form-container">
+                <p class="user1">
+        
+                    <label for="Username"></label>
+                    <i class="fas fa-id-badge"></i>
+                    <input type="text" name="user_name" id="Username" placeholder="enter username" minlength="6" maxlength="15">
+        
+                </p>
+                
+        
+                <p>
+                    <label for="Email"></label>
+                    <!-- <i class="fas fa-envelope"></i> -->
+                    <input type="number" name="Email" id="Email" placeholder="max capacity" >
+                </p>
+                
+                <p>
+                    <button>update maximum capacity</button>
+                </p>
+                <p>
+                    <button type="button" onclick="closeChangeEmail()">Close</button>
+              </p>
+        
+            </form>
+        
+        
+        </div>
+        
+
+        <button class="open-button" onclick="openChangeBusinessCode()"> write a review </button>
+        
+    <div class="RegiPanel" id="FormBusinessCode">
+        
+        <form action="/registration" class="form-container">
+            <p class="user1">
+    
+                <label for="Username"></label>
+                <i class="fas fa-id-badge"></i>
+                <input type="text" name="user_name" id="Username" placeholder="enter username" minlength="6" maxlength="15">
+    
+            </p>
+            
+    
+            <!-- <p> -->
+                <!-- <label for="Business code"></label> -->
+                <!-- <i class="fas fa-fingerprint"></i> -->
+				<!-- <textarea rows = "5" cols = "10" name = "description"> -->
+                <!-- <input type="textarea" rows="5" cols="5" name="Email" id="Email" placeholder="write the review here" > -->
+                
+                
+            <!-- </p> -->
+            
+        </form>
+		write a review:<br>
+		<form action = "/cgi-bin/hello_get.cgi" method = "get">
+         
+         <br>
+         <textarea rows = "7" cols = "27" name = "description"  wrap="physical">
+            
+         </textarea><br>
+         
+		 <p>
+                <button>update your review</button>
+            </p>
+           
+            <p>
+                <button type="button" onclick="closeChangeBusinessCode()">Close</button>
+          </p>
+		 
+      </form>
+    
+    </div>
+        
+</div>
+
+
+
+
+
+    <script>
+        function openChangePassword() {
+
+          document.getElementById("FormPassword").style.display = "block"; 
+        }
+        
+        function closeChangePassword() {
+          document.getElementById("FormPassword").style.display = "none";
+        }
+
+
+        function openChangeEmail() {
+          document.getElementById("FormEmail").style.display = "block";
+        }
+        
+        function closeChangeEmail() {
+          document.getElementById("FormEmail").style.display = "none";
+        }
+
+        function openChangeBusinessName() {
+          document.getElementById("FormBusinessName").style.display = "block";
+        }
+        
+        function closeChangeBusinessName() {
+          document.getElementById("FormBusinessName").style.display = "none";
+        }
+
+        function openChangeBusinessCode() {
+          document.getElementById("FormBusinessCode").style.display = "block";
+        }
+        
+        function closeChangeBusinessCode() {
+          document.getElementById("FormBusinessCode").style.display = "none";
+        }
+  </script>
+        
+    </center>
+		</main>
+</div>
+</body>
+
+</html>
