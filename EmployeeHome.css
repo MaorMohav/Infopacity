@@ -1,5 +1,5 @@
 body{
-		     background-image: url('manager.jpeg');
+		     background-image: url('emp.jpeg');
 	         background-size:500px;
 		     margin:0;
 			 background-color: #7CE7CA ;
@@ -120,6 +120,17 @@ body{
                 color: white;
              }
 			 
+			 button:hover {
+					
+						color: 7CE7CA ;
+					  }
+					  
+			button:hover:not(.active) {
+                background-color:  #7CE7CA;
+                color: red;
+             }
+			 
+			 
 			 
 			 #login{
 			 
@@ -139,6 +150,11 @@ body{
 			 h1{
 			 
 			 text-shadow: 2px 2px 5px #7CE7CA;
+			 }
+			 
+			 h3{
+				 color:white;
+				 
 			 }
 			 
 			 
@@ -183,22 +199,92 @@ body{
 			}
 			
 			.open-button {
-    margin:5px;
-    background-color: #1E9FC4;
-    color: red;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
+				margin:5px;
+				background-color: #1E9FC4;
+				color: red;
+				padding: 16px 20px;
+				border: none;
+				cursor: pointer;
+				opacity: 0.8;
+				bottom: 23px;
+				right: 28px;
+				width: 280px;
+			}
 
-  #f{
-	  font-size:20px;
-	  font-weight:bold;
-  }
+			 #f{
+				 font-size:5px;
+			     font-weight:bold;
+			 }
+			 
+			 #f2{
+				 font-size:20px;
+			 }
+			 
+			 body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+
+
+.form-popup {
+  background-color: #7ce7ca;
+    text-align: center;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30px;
+    margin-top: 10px;
+    width:365px;
+    bottom: 250px;
+	margin-left:-2.3%;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    position: fixed;
+    height: 400px;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #7CE7CA;
+  border-radius: 15px;
+}
+
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px  22px 0;
+  border: none;
+  background: #f1f1f1;
+  margin-left:11%;
+}
+
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+			  
   
  
 }

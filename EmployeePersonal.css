@@ -1,5 +1,5 @@
 body{
-    background-image: url('manager.jpeg');
+    background-image: url('emp.jpeg');
     margin: 0%;
 	background-size:500px;
 	
@@ -147,7 +147,7 @@ h1{
     font-family: Impact;
     font-size: 78px;
     padding:20px;
-    margin-top: 78px;
+    margin-top: 60px;
     width:100%;
     text-align: center;
     
@@ -169,6 +169,7 @@ h2{
     text-align:center;
     border-radius:10px;
     float:center;
+	margin-top:120px;
 }
 
  
