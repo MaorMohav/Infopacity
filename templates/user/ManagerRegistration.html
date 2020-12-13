@@ -1,0 +1,82 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'user/ManagerRegistrationStyle.css' %}"> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infopacity-Registration</title>
+    <link rel="stylesheet" href="ManagerRegistrationStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+</head>
+
+<body>
+    <ul>
+		<li><a href="{% url 'user:Login' %}" >Home</a></li>
+		<li><a href="{% url 'user:About' %}">About</a></li>
+		<li><a href="{% url 'user:Contact' %}">Contact</a></li>
+  </ul>
+
+  <main>
+        <h1>Manager Registration</h1>
+        <div class="RegiPanel">
+            <h2>Enter your data:</h2>
+
+            <form action="{% url 'user:Submit_Manager' %}" method="post">
+                {% csrf_token %} 
+                <p class="user1">
+
+                    <label for="Username"></label>
+                    <i class="fas fa-id-badge"></i>
+                    <input type="text" name="user_name" id="Username" placeholder="enter username" minlength="6"
+                        maxlength="15">
+
+                </p>
+                <p>
+                    <label for="Password"></label>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="password" name="password" id="Password" placeholder="enter password" minlength="6"
+                        maxlength="20">
+                </p>
+				<p>
+					<label for="confirm-Password"></label>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="password" name="password_conf" id="Password" placeholder="confirm password" minlength="6"
+                        maxlength="20">
+				
+				</p>
+                <p>
+                    <label for="Email"></label>
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="Email" placeholder="enter email" required>
+                </p>
+                
+				<p>
+                    <label for="Business name"></label>
+                    <i class="fas fa-info-circle"></i>
+                    <input type="text" name="business_name" id="Email" placeholder="business name" required>
+                </p>
+				
+				<p>
+                    <label for="Business code"></label>
+                    <i class="fas fa-fingerprint"></i>
+                    <input type="text" name="business_code" id="Email" placeholder="business code" required>
+					<br>(choose a code up to 6 digits)
+					
+                </p>
+				
+                <p>
+                    <input type="checkbox" name="terms" id="terms">
+                    <label for="term">Agree to <a href="">terms of use</a></label>
+                </p>
+                <p>
+                    <button>Register</button>
+                </p>
+            </form>
+            Already have an account <a href="{% url 'user:Login' %}">log in </a>
+        </div>
+    </main>
+</body>
+
+</html>
