@@ -1,0 +1,162 @@
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>insert number of people</title>
+    <link rel="stylesheet" href="InsertNumPeople.css">
+	<h2>Hi dear employee</h2>
+
+	</head>
+
+
+
+<body>
+
+<div id="wholepage" >
+
+  <ul>
+		<li><a href="EmployeeHome.html" >Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+		<li id="logout"><a href="Login.html" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+		
+		
+		
+		    <p id="search">
+					<label for="confirm-Password"></label>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="text" name=" confirm Password" id="Password"  placeholder="current number of people in the business:" minlength="6"
+                        maxlength="20" <p>                              <!--script for queue manage-->
+                            <br><br><button class="open-button" onclick="openForm()">manage the queue</button>
+        
+			</p>
+							<div class="RegiPanel" id="FormPassword">
+								
+								<form action="/registration"  class="form-container">
+									<p class="user1">
+									
+									</p>
+									
+										<table id="table" style="width:150%">
+										  <tr>
+											<th>inside
+												<button class="open-button3" onclick="openForm3()">-</button>
+												<div class="form-popup3" id="myForm3">
+													<form action="/action_page.php" class="form-container2">
+														
+
+														<label for="email"><b></b></label>
+														<input type="text" placeholder="name of main customer" name="email" id="Password" required>
+														<br>
+														<label for="psw"><b></b></label>
+														<input type="number" placeholder="amount of people" name="psw" required>
+															
+														<br><br>
+														<button type="submit" class="btn">update capacity</button>
+														<br><br>
+														<button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+													</form>
+												</div>
+											
+											</th>
+											
+											
+											<th colspan="5">in queue <!-- start of +-->
+											
+											<button class="open-button2" onclick="openForm2()">+</button>
+											<div class="form-popup2" id="myForm2">
+											  <form action="/action_page.php" class="form-container">
+												
+												
+												<label for="email"><b></b></label>
+												<input type="text" placeholder="name of main customer" name="email" id="Password" required>
+												<br>
+												<label for="psw"><b></b></label>
+												<input type="number" placeholder="amount of people" name="psw" required>
+												<br><br>
+												<button type="submit" class="btn">update capacity</button>
+												<br><br>
+												<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+											  </form>
+											</div>
+										
+											<!--end of +-->
+											</th>
+											
+        
+        
+										  </tr>
+										  <tr>
+											
+											<td>yossi</td>
+											<td>david</td>
+											
+										  </tr>
+										  <tr>
+											
+											<td>vlad</td>
+											<td>dima</td>
+											
+										  </tr>
+										</table>
+
+						
+									 
+									<p>
+									<button type="button" id="res" onclick="closeForm()">restart queue</button>
+									</p>
+
+								</form>
+
+							</div>
+							
+						
+						
+			</p>
+			
+			
+			
+			
+	<script>
+        function openForm() {
+
+          document.getElementById("FormPassword").style.display = "block"; 
+        }
+		function closeForm() {
+          document.getElementById("FormPassword").style.display = "none";
+        }
+		function openForm2() {
+		  document.getElementById("myForm2").style.display = "block";
+		}
+
+		function closeForm2() {
+		  document.getElementById("myForm2").style.display = "none";
+		}
+		function openForm3() {
+		  document.getElementById("myForm3").style.display = "block";
+		}
+
+		function closeForm3() {
+		  document.getElementById("myForm3").style.display = "none";
+		}
+								
+	</script>		
+		
+			
+			
+			
+			
+			
+
+			
+			
+			
+					
+</div>	
+	
+
+</html>

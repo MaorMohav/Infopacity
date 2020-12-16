@@ -1,0 +1,393 @@
+body{
+		     background-image: url('emp.jpeg');
+	         background-size:500px;
+		     margin:0;
+			 background-color: #7CE7CA ;
+			 
+			 }
+			 #logout{
+				 color:red;
+				 position: fixed;
+				 margin-left:420px;
+			 }
+			 
+			 #wholepage{
+				 width:1800px;
+			 }
+			 
+			 #signup{
+				border:3px solid black;
+	
+				width:20%;
+				height:150px;
+				background-color:#1E9FC4;
+				text-align:center;
+				border-radius:10px;
+				margin-left:37%;
+				float:center;
+}
+			 
+			 #list{
+				color:blue;
+				font-size:20px;
+				text-align:left;
+				margin-left:1px;
+				list-style-type:none;
+	
+	
+	
+}
+			 #logo{
+			 
+			 
+			 
+			 margin:auto;
+			 
+			 text-align: center;
+			 
+			 
+			 
+			 }
+			 
+			
+			 
+			 
+			 
+			 /* the blue box */
+			 #search{
+				width: 28%;
+				border-radius: 5px;
+				
+				box-sizing: border-box;
+				background-color: white;
+				background-position: 10px 10px;
+				background-repeat: no-repeat;
+				padding-left: 80px; /*moving the white space left to right*/
+				border: none;
+				border-bottom: 2px solid black;
+				margin-left:33%;
+				background-color:#1E9FC4;
+				margin-top:5%;
+				
+				
+			 }
+			 
+			 /* the button */
+			 #b{
+				 margin-left:60px;
+				 background-color: #4CAF50; /* Green */
+				 border: none;
+				 color: white;
+				 padding: 15px 32px;
+				 text-align: center;
+				 text-decoration: none;
+				 display: inline-block;
+				 font-size: 13px;
+				
+				 
+			 }
+			 
+			 /* the white space */
+			 #Password{  
+				width:70%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				box-sizing: border-box;
+				background-color: white;
+				background-position: 10px 10px;
+				background-repeat: no-repeat;
+				padding-left: 22px;
+				border: none;
+				border-bottom: 2px solid white;
+				margin-left:5%
+			 }
+			 
+			 ul {
+			
+                   list-style-type: none;
+					padding:0;
+					margin:0;
+					position: fixed; /* Make it stick, even on scroll */
+					overflow: auto;
+					top:0;
+					width:100%;
+                    background-color: black;
+				
+                 }
+				 
+				 
+		     li {
+					float: left;
+				}
+ 
+           
+             
+			li a {
+			        
+			        display: inline-block;
+					color: white;
+					padding: 30px 50px;
+					text-decoration: none;
+				}
+       
+			
+			li a:hover {
+					
+						color: 7CE7CA ;
+					  }
+					  
+			 li a:hover:not(.active) {
+                background-color:  #7CE7CA;
+                color: white;
+             }
+			 
+			 
+			 #login{
+			 
+			 float:center;
+	   	     text-align: center;
+			 border-radius: 5px;
+			 background-color: white; 
+			 border:10px solid #a9efdc ;  
+	     	 margin:auto;
+			 margin:10px
+			 padding:6px;
+			 width:30%;
+
+			 }
+			 
+			 
+			 h1{
+			 
+			 text-shadow: 2px 2px 5px #7CE7CA;
+			 }
+			 
+			 
+			input[type=text], select {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+
+			
+             input[type=submit]{
+			width: 50%;
+			background-color: #a9efdc;
+			font-weight: bold;
+			color: black;
+			padding: 10px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			
+			}
+
+            input[type=submit]:hover {
+            background-color: #7CE7CA;
+			font-weight: bold;
+			color: white;
+            }
+			h2{
+				background-color: #7CE7CA;
+				font-family: Impact;
+				font-size: 78px;
+				padding:20px;
+				margin-top: 78px;
+				width:100%;
+				text-align: center;
+    
+			}
+			
+			/* ----------------------------------------------------------------- */
+			
+			.RegiPanel{
+				background-color: #7ce7ca;
+				text-align: center;
+				border-width: 5px;
+				border-color: black;
+				border-style: solid;
+				/* border-radius: 30px; */
+				margin-top: -10%;
+				width:28%;
+				bottom: 250px;
+				display: none;
+				/* position: absolute; */
+				z-index: 7;
+				margin-left:33%;
+				height: 400px;
+				opacity: 0.9;
+			}
+
+
+
+/* #Username  { */
+  
+  /* width: 53%; */
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
+  /* box-sizing: border-box; */
+  /* background-color: white; */
+  /* background-position:left; */
+  /* background-repeat: no-repeat; */
+  /* padding-left: 40px; */
+  /* border: none; */
+  /* border-bottom: 2px solid red; */
+/* } */
+
+/* #Password */
+/* { */
+    /* width: 53%; */
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
+    /* background-color: white; */
+    /* background-position: 10px 10px; */
+    /* background-repeat: no-repeat; */
+    /* padding-left: 40px; */
+    /* border: none; */
+    /* border-bottom: 2px solid red; */
+/* } */
+
+/* #Email  */
+/* { */
+    /* width: 53%; */
+    /* padding: 12px 20px; */
+    /* margin: 8px 0; */
+    /* box-sizing: border-box; */
+    /* background-color: white; */
+    /* background-position: 10px 10px; */
+    /* background-repeat: no-repeat; */
+    /* padding-left: 40px; */
+    /* border: none; */
+    /* border-bottom: 2px solid red; */
+/* } */
+
+				.RegiPanel i{
+					position: absolute;
+					color: rgb(66, 200, 194);
+					padding: 20px 10px;
+				}
+
+
+				.open-button {
+					margin-bottom:3px;
+					margin-left:29px;
+					background-color: #1E9FC4;
+					color: white;
+					padding: 16px 20px;
+					border: none;
+					cursor: pointer;
+					opacity: 0.8;
+					bottom: 23px;
+					right: 28px;
+					width: 280px;
+					
+
+				  }
+
+				  .open-button:hover:not(.active) {
+					background-color: #7CE7CA;
+					color: white;
+					
+				 }
+
+
+				  .form-container {
+					max-width: 300px;
+					padding: 10px;
+					background-color:#7CE7CA;
+				   
+				  }
+				  
+				  .form-container2 {
+					max-width: 300px;
+					padding: 10px;
+					background-color:red;
+				   
+				  }
+				 
+  
+	  /* #wholepage{ */
+		  /* width:1800px; */
+	  /* } */
+				table, th, td {
+				  border: 1px solid black;
+				  border-collapse: collapse;
+				  
+				}
+				th, td {
+				  padding: 15px;
+				  text-align:center;    
+				}
+				
+				
+				
+				#res{
+					margin-left:50%;
+				}
+				
+				#table{
+					margin-left:5%;
+				}
+				.open-button2 {
+				  background-color: white;
+				  color: black;
+				  padding: 16px 20px;
+				  border: none;
+				  cursor: pointer;
+				  opacity: 0.8;
+				  /* position: fixed; */
+				  bottom: 50px;
+				  right: 100px;
+				  width: 50px;
+				  z-index:9;
+				}
+				
+				.form-popup2 {/* for the +*/
+				  display: none;
+				  position: fixed; /*prevents the column from stretching*/
+				  bottom: 0;
+				  margin-left:-8%;
+				  margin-bottom:15%;
+				  border: 3px solid black;
+				  z-index: 9;
+				  width:15%;
+				  height:25%;
+				  background-color:#7CE7CA;
+				}
+				.open-button3 {
+				  background-color: white;
+				  color: black;
+				  padding: 16px 20px;
+				  border: none;
+				  cursor: pointer;
+				  opacity: 0.8;
+				  /* position: fixed; */
+				  bottom: 50px;
+				  right: 100px;
+				  width: 50px;
+				  z-index:9;
+				}
+				
+				.form-popup3 {/* for the -*/
+					width:15%;
+					background-color:#7CE7CA;
+					display: none;
+					position: fixed; /*prevents the column from stretching*/
+					bottom: 0;
+					margin-left:3%;
+					text-align:center;
+					margin-bottom:15%;
+					border: 3px solid black;
+					z-index: 9;
+					height:25%;
+				}
+				.form-container .btn:hover, .open-button2:hover, .open-button3:hover{
+				  opacity: 5;
+				}
+					
