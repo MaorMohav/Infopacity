@@ -1,0 +1,236 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'user/InsertNumPeople.css' %}"> 
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>insert number of people</title>
+    <link rel="stylesheet" href="InsertNumPeople.css">
+	<h2>Hi dear employee</h2>
+
+	</head>
+
+
+
+<body>
+
+<div id="wholepage" >
+
+  <ul>
+	<li><a href="{% url 'user:EmployeeHome' %}" >Home</a></li>
+	<li><a href="{% url 'user:Login' %}" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+		
+
+
+<div id = "search">
+		<form action="{% url 'user:Start_queue' %}" method="post" >
+        {% csrf_token %}
+            <p>
+    
+                <label for="initialize"></label>
+                <i class="fas fa-id-badge"></i>
+                <input type="number" name="initialize" id="Password" placeholder="current number of people in the business:"required>
+    
+            </p>
+            
+    
+            <p>
+                <label for="business_code"></label>
+                <i class="fas fa-fingerprint"></i>
+                <input type="text" name="business_code" id="Password" placeholder="business code" required>
+
+                
+            </p>
+            <p>
+                <button class="open-button">start queue</button>
+				<button class="open-button" type = "button"	onclick="openForm()">manage the queue</button>
+            </p>
+           
+        </form>
+    		
+</div>
+											
+						
+							<div class="RegiPanel" id="FormPassword">
+																		
+							     <form action="{% url 'user:Add_business' %}" method="post" class="form-container2">
+       						     {% csrf_token %} 
+									<p class="user1">
+									
+	
+									</p>
+									
+										<table id="table" style="width:150%">
+										  <tr>
+											<th>inside
+												<button class="open-button3" onclick="openForm3()">-</button>
+												<div class="form-popup3" id="myForm3">
+												
+												
+														
+														<label for="business_code"><b></b></label>
+														<input type="text" placeholder="business code" name="business_code" id="Password" required>
+														
+
+														<br>
+														<label for="amount"><b></b></label>
+														<input type="number" placeholder="amount of people" name="amount" required>
+						
+														<br><br>
+														<button  class="btn">update capacity</button>
+														<br><br>
+														<button type="button" class="btn cancel" onclick="closeForm3()">Close</button>
+													</form>
+												</div>
+											
+											</th>
+											
+											
+											<th colspan="5">in queue <!-- start of +-->
+											
+											<button class="open-button2" onclick="openForm2()">+</button>
+											<div class="form-popup2" id="myForm2">
+
+																								
+												<form action="{% url 'user:Add_to_queue' %}" method="post" class="form-container">
+       											{% csrf_token %} 
+
+												<label for="email"><b></b></label>
+												<input type="text" placeholder="business code" name="business_code" id="Password" required>
+												<label for="email"><b></b></label>
+												<input type="text" placeholder="name of main customer" name="name" id="Password" required>
+												<br>
+												<label for="psw"><b></b></label>
+												<input type="number" placeholder="amount of people" name="amount" required>
+												<br><br>
+												<button  class="btn">update capacity</button>
+												<br><br>
+												<button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+											    </form>
+											
+											</div>
+										
+											<!--end of +-->
+											</th>
+											
+											<tr>
+											
+											<th rowspan="30">{{number_of_people.number_of_people}}</th>
+										
+										     		{% for i in obj %}
+													<tr>
+														<td>
+														{{i.name}}  :  {{i.number_of_people}} 
+														
+														<td>
+														
+														<button type="button" class = "minus" onclick="removefromqueue()">-</button>
+														
+												<div class="form-popup3" id="myForm4">
+												<form action="{% url 'user:Remove_from_queue' %}" method="post" class="form-container2">
+       											 {% csrf_token %} 
+														
+														<label for="email"><b></b></label>
+														<input type="text" placeholder="business code" name="business_code" id="Password" required>
+														<label for="email"><b></b></label>
+														<input type="text" placeholder="name of main customer" name="name1" id="Password" required>	
+
+														<br>
+														<label for="psw"><b></b></label>
+														<input type="number" placeholder="amount of people" name="amount" required>
+						
+														<br><br>
+														<button type="submit" class="btn">update queue</button>
+														<br><br>
+														<button type="button" class="btn cancel" onclick="closeForm4()">Close</button>
+													</form>
+												</div>
+														
+														</td>
+
+														</td>
+														</tr>
+													{% endfor %}
+											
+										  
+
+										</table>
+	
+											
+						
+									 
+									<p>
+												<form action="{% url 'user:Reset_queue' %}" method="post" class="form-container2">
+       											 {% csrf_token %} 
+														
+														<label for="email"><b></b></label>
+														<input type="text" placeholder="business code for restart" name="business_code" id="Password" required>
+												
+												<p>
+												<button  id="res">restart queue</button>
+												</p>
+												<p>
+												<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+												</p>
+									</p>
+
+								</form>
+								
+
+							</div>
+							
+						
+						
+			</p>
+			
+			
+	<script>
+        function openForm() {
+
+          document.getElementById("FormPassword").style.display = "block"; 
+        }
+		function closeForm() {
+          document.getElementById("FormPassword").style.display = "none";
+        }
+		function openForm2() {
+		  document.getElementById("myForm2").style.display = "block";
+		}
+
+		function closeForm2() {
+		  document.getElementById("myForm2").style.display = "none";
+		}
+		function openForm3() {
+		  document.getElementById("myForm3").style.display = "block";
+		}
+
+		function closeForm3() {
+		  document.getElementById("myForm3").style.display = "none";
+		}
+		function removefromqueue() {
+		  document.getElementById("myForm4").style.display = "block";
+		}
+
+		function closeForm4() {
+		  document.getElementById("myForm4").style.display = "none";
+		}
+								
+	</script>		
+		
+			
+			
+			
+			
+			
+
+			
+			
+			
+					
+</div>	
+	
+
+</html>

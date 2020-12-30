@@ -1,22 +1,47 @@
-"""Infopacity URL Configuration
+from django.urls import path
+from django.conf.urls import url, include
+from user import views
+from .models import Manager,Employee,Client
 
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-from django.contrib import admin
-from django.urls import path , include
+app_name = 'user'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',include('user.urls')),
+    path('',views.Login_Page,name = "Login"),
+    path('About/',views.About,name = "About"),
+    path('Contact/',views.Contacts,name = "Contact"),
+    path('Register/',views.Register,name = "Register"),
+    path('Register/Manager/',views.ManagerRegistration,name = "ManagerRegistration"),
+    path('Register/Employee/',views.EmployeeRegistration,name = "EmployeeRegistration"),
+    path('Register/Client/',views.ClientRegistration,name = "ClientRegistration"),
+    path('Register/success/',views.Regiser_Success,name="RegisterSuccess"),
+    path('ManagerHome/',views.ManagerHome,name="ManagerHome"),
+    url(r'^Manager/',views.Submit_Manager,name ="Submit_Manager"),
+    url(r'^Employee/',views.Submit_Employee,name ="Submit_Employee"),
+    url(r'^Customer/',views.Submit_Client,name ="Submit_Customer"),
+    path('user/',views.Submit_Login,name ="User_Login"),
+    path('manager/update/',views.ManagerUpdate,name="ManagerUpdate"),
+    path('EmployeeHome/',views.EmployeeHome,name = "EmployeeHome"),
+    path('employee/update/',views.EmployeeUpdate,name="EmployeeUpdate"),
+    path('CustomerHome/',views.CustomerHome,name = "CustomerHome"),
+    path('customer/update/',views.CustomerUpdate,name="CustomerUpdate"),
+    path('manager/update/business/',views.ManagerBusinessUpdate,name="ManagerBusinessUpdate"),
+    url(r'^customer/update/personalEmail/',views.ClientEmailUpdate,name="ClientEmailUpdate"),
+    url(r'^customer/update/personalPassword/',views.ClientPasswordlUpdate,name="ClientPasswordUpdate"),
+    url(r'^employee/update/personalEmail/',views.EmployeeEmailUpdate,name="EmployeeEmailUpdate"),
+    url(r'^employee/update/personalPassword/',views.EmployeePasswordlUpdate,name="EmployeePasswordUpdate"),
+    url(r'^manager/update/personalPassword/',views.ManagerPasswordlUpdate,name="ManagerPasswordUpdate"),
+    url(r'^manager/update/personalEmail/',views.ManagerEmailUpdate,name="ManagerEmailUpdate"),
+    url(r'^manager/update/personalBusineesname/',views.ManagerBusinessNameUpdate,name="ManagerBusinessNameUpdate"),
+    url(r'^manager/update/personalBusineescode/',views.ManagerBusinessCodeUpdate,name="ManagerBusinessCodeUpdate"),
+    url(r'^manager/update/business/hours',views.BusinessHours,name="Businesshours"),
+    url(r'^manager/update/business/maxcapacity',views.BusinessCapacity,name="Businesscapacity"),
+    url(r'^manager/update/business/description',views.BusinessDescription,name="Businessdescription"),
+    path('EmployeeHome/InsertNumPeople',views.InsertNumPeople,name ="InsertNumPeople"),
+    path('EmployeeHome/InsertNumPeople/startqueue',views.Start_queue,name ="Start_queue"),
+    path('EmployeeHome/InsertNumPeople/startqueue/id',views.Add_to_queue,name ="Add_to_queue"),
+    path('EmployeeHome/InsertNumPeople/startqueue/remove',views.Remove_from_queue,name ="Remove_from_queue"),
+    path('EmployeeHome/InsertNumPeople/startqueue/reset',views.Reset_queue,name ="Reset_queue"),
+    path('EmployeeHome/InsertNumPeople/startqueue/Add',views.Delete_business,name ="Add_business"),
+    path('CustomerHome/search',views.ClientSearch,name = "ClientSearch"),
+
 ]

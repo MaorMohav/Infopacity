@@ -1,0 +1,89 @@
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>EmployeeHome</title>
+    <link rel="stylesheet" href="EmployeeHome.css">
+	<h2>Let's start working!</h2>
+
+	</head>
+
+
+
+<body>
+<div id="wholepage" >
+  <ul>
+		<li><a href="EmployeeHome.html" >Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+		<li id="logout"><a href="Login.html" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+		
+		
+		
+		    <p id="search">
+					<label for="confirm-Password"></label>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="text" name=" confirm Password" id="Password"  placeholder="search for other business places" minlength="6"
+                        maxlength="20" <p>
+                            <button>Search</button>
+                </p>>
+						
+						
+			</p>
+			
+			
+		<div id="signup" > 
+		
+		
+			
+			<ol id="list" >
+				<li > <a id="d"  href="EmployeePersonal.html">Update personal details </a></li>
+				<li> <a href="InsertNumPeople.html" > Control in real time! </a> </li>
+				<button class="open-button" onclick="openForm()" id="f2">Change transaction place</button>
+				<div class="form-popup" id="myForm">
+					<form action="/action_page.php" class="form-container">
+						<h3>New business details</h3>
+						<p>
+						<label for="Business name"></label>
+						
+						<input type="text" name="Email" id="Email" placeholder=" Enter business name" >
+						</p>
+						<input type="password" placeholder="Enter Business code" name="psw" required>				
+						<p>
+							<button>submit</button>
+        
+						</p>
+							<button type="button"  onclick="closeForm()">Close</button>
+						
+					</form>
+				</div>
+			</ol>
+		
+		
+		
+		
+		</div>
+			
+			
+			
+			
+			
+				
+		
+</div>	
+<script>
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		}
+
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+</script>
+
+</body>
+</html>
