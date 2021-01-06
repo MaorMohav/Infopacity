@@ -1,0 +1,91 @@
+
+		 body{
+		    
+		     margin:0;
+			 background-color: white ;
+			 
+			 }
+			
+			 
+			 ul {
+			
+                   list-style-type: none;
+					padding:0;
+					margin:0;
+					position: fixed; /* Make it stick, even on scroll */
+					overflow: auto;
+					top:0;
+					width:100%;
+                    background-color: black;
+				
+                 }
+				 
+				 
+		     li {
+					float: left;
+				}
+ 
+
+             
+			li a {
+			        
+			        display: inline-block;
+					font-size: 16px;
+					color: white;
+					padding: 30px 50px;
+					text-decoration: none;
+				}
+
+			
+			li a:hover {
+					
+						color: 7CE7CA ;
+					  }
+					  
+			 li a:hover:not(.active) {
+                background-color:  #7CE7CA;
+                color: white;
+             }
+			 
+			 
+			
+			  
+			 #about1{
+		      background-color: #7CE7CA;
+			 font-family: Impact;
+			 font-size: 72px;
+			 padding:20px;
+			 margin:auto;
+		     width:100%;
+			 text-align: center;
+			 
+			 }
+			 
+			 
+			 #explanation{
+			 float:center;
+			 width: 80%;
+			 height:550px;
+			 margin:auto;
+			 margin:100px;
+			 
+			 }
+			 
+			 
+			 .mainImg{
+			 
+			 float:left;
+			 margin-right:80px;
+			 height:500px;
+			 }
+		      
+			  
+			  p{ 
+			  
+			  color:#8c8c8c;
+			  font-family: "Yu Gothic UI" ;
+			  font-size:17px;
+			 
+			  }
+			 
+		

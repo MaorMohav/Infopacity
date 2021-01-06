@@ -1,0 +1,205 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'user/CustomerHome.css' %}"> 
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>Customer home</title>
+    <link rel="stylesheet" href="CustomerHome.css">
+	<h2>Welcome to Customer Homepage!</h2>
+
+	</head>
+
+
+
+<body>
+
+<div id="wholepage" >
+  <ul>
+	<li><a href="{% url 'user:CustomerHome' %}" >Home</a></li>
+	<li><a href="{% url 'user:Login' %}" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+		
+		
+		 <form action="{% url 'user:ClientSearch' %}" method="post" >
+        {% csrf_token %} 
+		   <p id="search">
+			
+
+			
+
+				<strong>choose a city:</strong>
+				<br>	
+					<select name="city" id="country" class="country">  
+						<option value="All_cities">All cities</option>
+						<option value="Afula">Afula</option>
+						<option value="Akko">Akko</option>
+						<option value="Arad">Arad</option>
+						<option value="Ariel">Ariel</option>
+						<option value="Ashdod">Ashdod</option>
+						<option value="Ashkelon">Ashkelon</option>
+						<option value="Baqa al-Gharbiyye">Baqa al-Gharbiyye</option>
+						<option value="Bat Yam">Bat Yam</option>
+						<option value="Beer Sheva">Beer Sheva</option>
+						<option value="Beit Shean">Beit Shean</option>
+						<option value="Beit Shemesh">Beit Shemesh</option>
+						<option value="Betar Illit">Betar Illit</option>
+						<option value="Bnei Berak">Bnei Berak</option>
+						<option value="Dimona">Dimona</option>
+						<option value="Eilat">Eilat</option>
+						<option value="Elad">Elad</option>
+						<option value="Givatayim">Givatayim</option>
+						<option value="Hadera">	Hadera</option>
+						<option value="Haifa">Haifa</option>
+						<option value="Harish">	Harish</option>
+						<option value="Herzliya">Herzliya</option>
+						<option value="	Hod HaSharon">Hod HaSharon</option>
+						<option value="Holon">Holon</option>
+						<option value="Jerusalem">Jerusalem</option>
+						<option value="Karmiel">Karmiel</option>
+						<option value="Kfar Sava">Kfar Sava</option>
+						<option value="Kiryat Ata">Kiryat Ata</option>
+						<option value="Kiryat Bialik">Kiryat Bialik</option>
+						<option value="Kiryat Gat">Kiryat Gat</option>
+						<option value="	Kiryat Malachi">Kiryat Malachi</option>
+						<option value="Kiryat Motzkin">	Kiryat Motzkin</option>
+						<option value="Kiryat Ono">	Kiryat Ono</option>
+						<option value="Kiryat Shemone">	Kiryat Shemone</option>
+						<option value="Kiryat Yam">	Kiryat Yam</option>
+						<option value="Lod">Lod</option>
+						<option value="Maale Adumim">Maale Adumim</option>
+						<option value="Maalot Tarshiha">Maalot Tarshiha</option>
+						<option value="Migdal HaEmek">Migdal HaEmek</option>
+						<option value="Modiin">Modiin</option>
+						<option value="Nahariya">Nahariya</option>
+						<option value="Nazareth">Nazareth</option>
+						<option value="Nes Ziona">Nes Ziona</option>
+						<option value="Nesher">	Nesher</option>
+						<option value="Netanya">Netanya</option>
+						<option value="Netivot">Netivot</option>
+						<option value="Nof Hagalil">Nof Hagalil</option>
+						<option value="Ofakim">Ofakim</option>
+						<option value="Or Akiva">Or Akiva</option>
+						<option value="Or Yehuda">Or Yehuda</option>
+						<option value="Petah Tikva">Petah Tikva</option>
+						<option value="Qalansawe">Qalansawe</option>
+						<option value="Raanana">Raanana</option>
+						<option value="Rahat">Rahat</option>
+						<option value="Ramat Hasharon">Ramat Hasharon</option>
+						<option value="Ramat-Gan">Ramat-Gan</option>
+						<option value="Ramla">Ramla</option>
+						<option value="Rehovot">Rehovot</option>
+						<option value="Rishon Lezion">Rishon Lezion</option>
+						<option value="Rosh Ha'ayin">Rosh Ha'ayin</option>
+						<option value="Sakhnin">Sakhnin</option>
+						<option value="Sderot">	Sderot</option>
+						<option value="Shefaram">Shefaram</option>
+						<option value="Taibeh">Taibeh</option>
+						<option value="Tamra">Tamra</option>
+						<option value="Tel Aviv">Tel Aviv</option>
+						<option value="Tiberias">Tiberias</option>
+						<option value="AU">	Tira</option>
+						<option value="Tira">Tirat Carmel</option>
+						<option value="Tsfat (Safed)">Tsfat (Safed)</option>
+						<option value="Umm al-Fahm">Umm al-Fahm</option>
+						<option value="Yavne">Yavne</option>
+						
+					</select>
+					<br><br>
+					<label for="confirm-Password"></label>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="text" name="user_name" id="Password"  placeholder="search for business places" minlength="6"
+                        maxlength="20" <p>
+                            <button  >Search</button>
+		</form>	
+                </p>>
+				{{obj1.business_name}}
+
+				{% for i in obj2%}
+					{{i.business_name}}
+				{% endfor %}
+						
+			</p>
+			
+			
+			<div id="signup" > 
+		
+		
+			
+			<ol id="list" >
+				<li > <a id="d"  href="{% url 'user:CustomerUpdate' %}">update personal details </a></li>
+				
+				
+			
+		</ol>
+
+
+	<p class ="searching" id = "searching">	
+		<div class = "navbar_search" id= "navbar_search">
+
+			<p>
+				{{obj1.business_name}}
+
+				{% for i in obj2%}
+					{{i.business_name}}
+				{% endfor %}
+		
+			</p>
+		
+		</div>
+		
+	<script>
+
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+//	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+ 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+	{
+  	 	 document.getElementById("navbar_search").style.top = "0";
+ 	}
+    else 
+	{
+   	 document.getElementById("navbar_search").style.top = "-50px";
+  	}	
+	}
+	</script>
+
+
+	</p>
+			
+			
+
+			
+			
+			
+				
+		
+</div>	
+<script>
+  		function openForm() {
+          document.getElementById("searching").style.display = "block";
+		  document.getElementById("list").style.display="none";
+        }
+        
+        function closeForm() {
+          document.getElementById("searching").style.display = "none";
+		  document.getElementById("list").style.display="block";
+        }
+
+
+</script>
+</center>	
+
+
+</body>
+
+
+
+</html>
+
+
+	 
