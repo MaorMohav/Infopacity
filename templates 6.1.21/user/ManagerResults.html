@@ -1,0 +1,81 @@
+{% load static %}
+    <link rel="stylesheet" href="{% static 'user/ManagerResults.css' %}"> 
+
+<html>
+
+	<head>
+	    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <title>CustomerResults</title>
+    <link rel="stylesheet" href="CustomerResults.css">
+	<h1>Search Results:</h1>
+
+	</head>
+
+
+
+<body>
+<div id="wholepage" >
+  <ul>
+	<li><a href="{% url 'user:ManagerHome' %}" >Home</a></li>
+	<li><a href="{% url 'user:Login' %}" style="color:red"><strong>Logout<strong></a></li>
+  </ul>
+
+
+
+	<div class="ex1">
+		
+		<table style="width:100%">
+		  <tr>
+			<th style="color:red;"><h2>Business Name</h2></th>
+			<th style="color:red;"><h2>Description</h2></th> 
+			<th style="color:red;"><h2>Working Hours</h2></th>
+			<th style="color:red;"><h2>Number of people in business</h2></th>  
+		  </tr>
+		 
+		 
+		 
+		 
+		  {% for i in obj2 %}
+		  <tr>
+			<td>{{i.business_name}}</td>
+			<td>{{i.description}}</td>
+			<td>open hours: {{i.opening}},  close hours: {{i.closing}}</td>
+		  
+		  {% for j in obj3 %}
+			{% if j.business_code == i.business_code%}
+			<td>{{j.number_of_people}}</td>
+			{% endif %}
+		  {% endfor %}
+		  </tr>
+		  {% endfor %}
+
+
+
+		{% if obj1 != None %}
+		  <tr>
+			<td>{{obj1.business_name}}</td>
+			<td>{{obj1.description}}</td>
+			<td>open hours: {{obj1.opening}},  close hours: {{obj1.closing}}</td>
+			{% if business != None%}
+				<td>{{business.number_of_people}}</td>
+			{% else %}
+				<td>0</td>
+			{% endif %}
+		  </tr>
+		{% endif %}
+		</table>
+		
+	</div>
+	<div>
+		<<button class="back"><a href="{% url 'user:ManagerHome' %}" >Back To Homepage</a></button>
+	</div>
+
+</div>
+
+
+</body>
+
+</html>
